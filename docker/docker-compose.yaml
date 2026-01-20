@@ -2,14 +2,14 @@ version: "3.8"
 
 services:
   primary_school_frontend:
-    image: profile_page_frontend:1.0
-    container_name: profile_page_frontend
+    image: portfolio_page_frontend:1.0
+    container_name: portfolio_page_frontend
     build: ../
     ports: 
-      - ${PROFILE_PAGE_FRONTEND_PORT}:3000
+      - ${PORTFOLIO_PAGE_FRONTEND_PORT}:3000
     environment:
       - NEXT_PUBLIC_AUTHENTICATION_TYPE=${AUTHENTICATION_TYPE}
-      - NEXT_PUBLIC_PROFILE_PAGE_FRONTEND_CONTAINER_NAME=${PROFILE_PAGE_FRONTEND_CONTAINER_NAME}
+      - NEXT_PUBLIC_PORTFOLIO_PAGE_FRONTEND_CONTAINER_NAME=${PORTFOLIO_PAGE_FRONTEND_CONTAINER_NAME}
     networks:
       - profile-page
     volumes:
