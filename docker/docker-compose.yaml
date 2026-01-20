@@ -11,9 +11,9 @@ services:
       - NEXT_PUBLIC_AUTHENTICATION_TYPE=${AUTHENTICATION_TYPE}
       - NEXT_PUBLIC_PORTFOLIO_PAGE_FRONTEND_CONTAINER_NAME=${PORTFOLIO_PAGE_FRONTEND_CONTAINER_NAME}
     networks:
-      - profile-page
+      - portfolio-page
     volumes:
       - ../:/app
 
 networks:
-  profile-page:
+  portfolio-page:
