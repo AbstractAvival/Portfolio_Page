@@ -1,9 +1,9 @@
 // MUI components
-import Box from "@mui/material/Box"
+import Box from '@mui/material/Box'
 
-const EmptyColumn = () => {
+const EmptyColumn = props => {
     return (
-        <Box />
+        <Box sx={ { height: '100%', width: props.width } }/>
     )
 }
 
