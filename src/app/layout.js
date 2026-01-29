@@ -1,4 +1,5 @@
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter'
+import { NextIntlClientProvider } from 'next-intl'
 
 // Styles
 import styles from '../styles/portfolio.module.css'
@@ -13,7 +14,9 @@ export default function RootLayout( { children } ) {
     <html lang="en">
       <body className={ styles.body } >
         <AppRouterCacheProvider>
-          { children }
+          <NextIntlClientProvider>
+            {children}
+          </NextIntlClientProvider>
         </AppRouterCacheProvider>
       </body>
     </html>
