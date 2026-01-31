@@ -15,9 +15,9 @@ export default function Home() {
                 justifyContent: 'center' 
             } }
         >
-            <EmptyColumn width={ '20%' }/>
+            <EmptyColumn width={ '18%' }/>
             <MainColumn />
-            <EmptyColumn width={ '20%' }/>
+            <EmptyColumn width={ '18%' }/>
         </Box>
     )
 }

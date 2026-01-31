@@ -6,7 +6,7 @@ import Paper from "@mui/material/Paper"
 
 const MainColumn = props => {
     return (
-        <Paper elevation={ 0 } sx={ { backgroundColor: '#38040E', width: '60%' } }>
+        <Paper elevation={ 0 } sx={ { backgroundColor: '#38040E', width: '64%' } }>
             <ProfileImageSection 
                 imagePosition={ 'left' } 
                 title={ 'greeting_glad' }

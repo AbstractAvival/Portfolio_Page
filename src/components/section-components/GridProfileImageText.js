@@ -1,23 +1,18 @@
 // ** Component Imports
+import GridProfileImage from "@/components/section-components/GridProfileImage"
 import GridText from "@/components/section-components/GridText"
-
-// ** MUI components
-import Grid from '@mui/material/Grid'
-import Avatar from '@mui/material/Avatar'
 
 const GridProfileImageText = ( { imagePosition, imageSize, text, textPosition, title } ) => {
     return (
         <>
             { imagePosition == 'left' ? 
                 <>
-                    <Grid size={ 5 } sx={ { alignItems: 'center', display: 'flex', justifyContent: 'center' } }>
-                        <Avatar 
-                            alt={ process.env.NEXT_PUBLIC_DEVELOPER_NAME }
-                            src='' 
-                            sx={ { height: '80%', width: '80%' } } 
-                            variant= 'square'
-                        />
-                    </Grid>
+                    <GridProfileImage
+                        backgroundColor={ '#640D14' }
+                        imageBackgroundColor={ '#640D14' }
+                        imageURL=''
+                        size={ 5 }
+                    />
                     <GridText 
                         size={ 7 } 
                         title={ title } 
@@ -27,18 +22,16 @@ const GridProfileImageText = ( { imagePosition, imageSize, text, textPosition, t
                 : imagePosition == 'right' ?
                 <>
                     <GridText 
-                        size={ 8 } 
+                        size={ 7 } 
                         title={ title } 
                         text={ text }
                     />
-                    <Grid size={ 4 } sx={ { alignItems: 'center', display: 'flex', justifyContent: 'center' } }>
-                        <Avatar 
-                            alt={ process.env.NEXT_PUBLIC_DEVELOPER_NAME }
-                            src='' 
-                            sx={ { height: '100%', width: '100%' } } 
-                            variant= 'squared'
-                        />
-                    </Grid>
+                    <GridProfileImage
+                        backgroundColor={ '#640D14' }
+                        imageBackgroundColor={ '#640D14' }
+                        imageURL=''
+                        size={ 5 }
+                    />
                 </>
                 : textPosition == 'top' ?
                 <>
@@ -47,25 +40,21 @@ const GridProfileImageText = ( { imagePosition, imageSize, text, textPosition, t
                         title={ title } 
                         text={ text }
                     />
-                    <Grid size={ 12 } sx={ { alignItems: 'center', display: 'flex', justifyContent: 'center' } }>
-                        <Avatar 
-                            alt={ process.env.NEXT_PUBLIC_DEVELOPER_NAME }
-                            src='' 
-                            sx={ { height: '100%', width: '100%' } } 
-                            variant= 'squared'
-                        />
-                    </Grid>
+                    <GridProfileImage
+                        backgroundColor={ '#640D14' }
+                        imageBackgroundColor={ '#640D14' }
+                        imageURL=''
+                        size={ 12 }
+                    />
                 </>
                 :
                 <>
-                    <Grid size={ 12 } sx={ { alignItems: 'center', display: 'flex', justifyContent: 'center' } }>
-                        <Avatar 
-                            alt={ process.env.NEXT_PUBLIC_DEVELOPER_NAME }
-                            src='' 
-                            sx={ { height: '100%', width: '100%' } } 
-                            variant= 'squared'
-                        />
-                    </Grid>
+                    <GridProfileImage
+                        backgroundColor={ '#640D14' }
+                        imageBackgroundColor={ '#640D14' }
+                        imageURL=''
+                        size={ 12 }
+                    />
                     <GridText 
                         size={ 12 } 
                         title={ title } 
