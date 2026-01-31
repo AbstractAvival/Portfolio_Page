@@ -11,14 +11,13 @@ export default function Home() {
             sx={ { 
                 alignItems: 'center', 
                 display: 'flex', 
-                flexDirection: 'column', 
-                justifyContent: 'center', 
-                mb: 7 
+                flexDirection: 'row', 
+                justifyContent: 'center' 
             } }
         >
-            <EmptyColumn />
+            <EmptyColumn width={ '20%' }/>
             <MainColumn />
-            <EmptyColumn />
+            <EmptyColumn width={ '20%' }/>
         </Box>
     )
 }
