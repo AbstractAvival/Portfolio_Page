@@ -1,15 +1,23 @@
-// ** MUI components
-import Box from '@mui/material/Box'
-import Typography from "@mui/material/Typography"
+// ** Component Imports
+import GridProfileImageText from '@/components/section-components/GridProfileImageText'
 
-const ProfileImageSection = ( { profileImagePosition } ) => {
-    const translations = useTranslations()
+// ** MUI components
+import Grid from '@mui/material/Grid'
+
+const ProfileImageSection = ( { imagePosition, text, textPosition, title } ) => {
     return (
-        <Box>
-            <Typography variant='h5'>
-                { translations( 'greeting_glad' ) }
-            </Typography>
-        </Box>
+        <Grid container 
+            sx={ {
+                margin: 2
+            } }
+        >
+            <GridProfileImageText
+                imagePosition={ imagePosition } 
+                title={ title }
+                text={ text }
+                textPosition={ textPosition }
+            />
+        </Grid>
     )
 }
 
