@@ -15,16 +15,24 @@ const GridProfileImageText = ( { imagePosition, imageSize, text, textPosition, t
                     />
                     <GridText 
                         size={ 7 } 
-                        title={ title } 
                         text={ text }
+                        textColor={ '#800E13' }
+                        textSize={ 'h5' }
+                        title={ title }
+                        titleColor={ '#AD2831' }
+                        titleSize={ 'h4' }
                     />
                 </>
                 : imagePosition == 'right' ?
                 <>
                     <GridText 
                         size={ 7 } 
-                        title={ title } 
                         text={ text }
+                        textColor={ '#800E13' }
+                        textSize={ 'h5' }
+                        title={ title }
+                        titleColor={ '#AD2831' }
+                        titleSize={ 'h5' }
                     />
                     <GridProfileImage
                         backgroundColor={ '#640D14' }
@@ -37,8 +45,12 @@ const GridProfileImageText = ( { imagePosition, imageSize, text, textPosition, t
                 <>
                     <GridText 
                         size={ 12 } 
-                        title={ title } 
                         text={ text }
+                        textColor={ '#800E13' }
+                        textSize={ 'h5' }
+                        title={ title }
+                        titleColor={ '#AD2831' }
+                        titleSize={ 'h5' }
                     />
                     <GridProfileImage
                         backgroundColor={ '#640D14' }
@@ -57,8 +69,12 @@ const GridProfileImageText = ( { imagePosition, imageSize, text, textPosition, t
                     />
                     <GridText 
                         size={ 12 } 
-                        title={ title } 
                         text={ text }
+                        textColor={ '#800E13' }
+                        textSize={ 'h5' }
+                        title={ title }
+                        titleColor={ '#AD2831' }
+                        titleSize={ 'h5' }
                     />
                 </>
             }
