@@ -1,5 +1,10 @@
 {
+    "additional_platforms": "place_value_here",
+    "developer_email": "place_value_here",
+    "developer_github": "place_value_here",
     "developer_name": "place_value_here",
+    "farewell_description": "place_value_here",
+    "greeting_description": "place_value_here",
     "greeting_glad": "place_value_here",
     "greeting_glad_with_developer": "place_value_here",
     "who_are_you": "place_value_here"
