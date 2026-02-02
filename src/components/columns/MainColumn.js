@@ -10,7 +10,7 @@ const MainColumn = props => {
             <ProfileImageSection 
                 imagePosition={ 'left' } 
                 title={ 'greeting_glad' }
-                text={ '' }
+                text={ 'greeting_description' }
                 textPosition={ 'bottom' }
             />
         </Paper>
