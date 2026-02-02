@@ -1,4 +1,5 @@
 // ** Component Imports
+import DoubleColumnContactSection from "@/components/column-sections/contact/DoubleColumnContactSection"
 import ProfileImageSection from "@/components/column-sections/introduction/ProfileImageSection"
 
 // MUI components
@@ -13,6 +14,7 @@ const MainColumn = props => {
                 text={ 'greeting_description' }
                 textPosition={ 'bottom' }
             />
+            <DoubleColumnContactSection />
         </Paper>
     )
 }
