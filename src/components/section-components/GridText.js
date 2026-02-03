@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 
-const GridText = ( { size, text, textColor, textSize, title, titleColor, titleSize } ) => {
+const GridText = ( { padding, size, text, textColor, textSize, title, titleColor, titleSize } ) => {
     const translations = useTranslations()
     return (
         <Grid size={ size  } 
@@ -13,10 +13,11 @@ const GridText = ( { size, text, textColor, textSize, title, titleColor, titleSi
                 alignItems: 'center', 
                 display: 'flex', 
                 flexDirection: 'column', 
-                justifyContent: 'center' 
+                justifyContent: 'center',
+                paddingX: padding ? padding : '' 
             } }
         >
-            <Typography sx={ { color: titleColor ? titleColor : '' } } variant={ titleSize ? titleSize : '' }>
+            <Typography sx={ { color: titleColor ? titleColor : '', mb: 2 } } variant={ titleSize ? titleSize : '' }>
                 { title ? translations( title ) : '' }
             </Typography>
             <Typography sx={ { color: textColor ? textColor : '' } } variant={ textSize ? textSize : '' }>

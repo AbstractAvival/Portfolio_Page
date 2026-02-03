@@ -10,7 +10,7 @@ const MainColumn = props => {
         <Paper elevation={ 0 } sx={ { backgroundColor: '#38040E', width: '64%' } }>
             <ProfileImageSection 
                 imagePosition={ 'left' } 
-                title={ 'greeting_glad' }
+                title={ 'greeting_glad_with_developer' }
                 text={ 'greeting_description' }
                 textPosition={ 'bottom' }
             />

@@ -13,6 +13,7 @@ const ProfileImageSection = ( { imagePosition, text, textPosition, title } ) => 
         >
             <GridProfileImageText
                 imagePosition={ imagePosition } 
+                padding={ 4 }
                 title={ title }
                 text={ text }
                 textPosition={ textPosition }

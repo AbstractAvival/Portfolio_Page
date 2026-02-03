@@ -2,7 +2,7 @@
 import GridProfileImage from "@/components/section-components/GridProfileImage"
 import GridText from "@/components/section-components/GridText"
 
-const GridProfileImageText = ( { imagePosition, imageSize, text, textPosition, title } ) => {
+const GridProfileImageText = ( { imagePosition, imageSize, padding, text, textPosition, title } ) => {
     return (
         <>
             { imagePosition == 'left' ? 
@@ -14,12 +14,13 @@ const GridProfileImageText = ( { imagePosition, imageSize, text, textPosition, t
                         size={ 5 }
                     />
                     <GridText 
+                        padding={ padding ? padding : 0 }
                         size={ 7 } 
                         text={ text }
-                        textColor={ '#800E13' }
-                        textSize={ 'h5' }
+                        textColor={ '#FFFFFF' }
+                        textSize={ 'subtitle1' }
                         title={ title }
-                        titleColor={ '#AD2831' }
+                        titleColor={ '#FFFFFF' }
                         titleSize={ 'h4' }
                     />
                 </>
@@ -28,10 +29,10 @@ const GridProfileImageText = ( { imagePosition, imageSize, text, textPosition, t
                     <GridText 
                         size={ 7 } 
                         text={ text }
-                        textColor={ '#800E13' }
+                        textColor={ '#FFFFFF' }
                         textSize={ 'h5' }
                         title={ title }
-                        titleColor={ '#AD2831' }
+                        titleColor={ '#FFFFFF' }
                         titleSize={ 'h5' }
                     />
                     <GridProfileImage
@@ -46,10 +47,10 @@ const GridProfileImageText = ( { imagePosition, imageSize, text, textPosition, t
                     <GridText 
                         size={ 12 } 
                         text={ text }
-                        textColor={ '#800E13' }
+                        textColor={ '#FFFFFF' }
                         textSize={ 'h5' }
                         title={ title }
-                        titleColor={ '#AD2831' }
+                        titleColor={ '#FFFFFF' }
                         titleSize={ 'h5' }
                     />
                     <GridProfileImage
@@ -70,10 +71,10 @@ const GridProfileImageText = ( { imagePosition, imageSize, text, textPosition, t
                     <GridText 
                         size={ 12 } 
                         text={ text }
-                        textColor={ '#800E13' }
+                        textColor={ '#FFFFFF' }
                         textSize={ 'h5' }
                         title={ title }
-                        titleColor={ '#AD2831' }
+                        titleColor={ '#FFFFFF' }
                         titleSize={ 'h5' }
                     />
                 </>
