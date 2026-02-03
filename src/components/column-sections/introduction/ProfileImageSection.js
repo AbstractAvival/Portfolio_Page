@@ -8,12 +8,12 @@ const ProfileImageSection = ( { imagePosition, text, textPosition, title } ) => 
     return (
         <Grid container 
             sx={ {
-                margin: 2
+                margin: 12
             } }
         >
             <GridProfileImageText
                 imagePosition={ imagePosition } 
-                padding={ 4 }
+                padding={ 8 }
                 title={ title }
                 text={ text }
                 textPosition={ textPosition }
