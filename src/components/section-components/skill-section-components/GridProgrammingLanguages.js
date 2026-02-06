@@ -3,6 +3,7 @@ import TranslatedText from '@/components/section-components/TranslatedText'
 
 // ** MUI components
 import Grid from '@mui/material/Grid'
+import Paper from '@mui/material/Paper'
 import Typography from '@mui/material/Typography'
 
 const tempItems = [
@@ -40,35 +41,46 @@ const tempItems = [
     }
 ]
 
-const GridProgrammingLanguages = ( { color, items } ) => {
+const GridProgrammingLanguages = ( { backgroundColor, color, items } ) => {
     return (
-        <Grid container>
-            <Grid size={ 12 }
-                sx={ {
-                    display: 'flex',
-                    justifyContent: 'center'
-                } }
+        <Paper elevation={ 1 } 
+            sx={ { 
+                alignItems: 'center',
+                backgroundColor: backgroundColor, 
+                display: 'flex',
+                height: '100%', 
+                justifyContent: 'center',
+                margin: 1
+            } }
             >
-                <TranslatedText 
-                    center={ true }
-                    color={ color ? color : '' }
-                    size={ 'subtitle1' }
-                    text={ 'programming_languages' }
-                />
-            </Grid>
-            { tempItems.map( ( item ) => (
-                <Grid size={ 4 } 
-                    sx={ {  
+            <Grid container>
+                <Grid size={ 12 }
+                    sx={ {
                         display: 'flex',
                         justifyContent: 'center'
                     } }
                 >
-                    <Typography sx={ { color: color ? color : '' } } variant='subtitle2'>
-                        { item.name }
-                    </Typography>
+                    <TranslatedText 
+                        center={ true }
+                        color={ color ? color : '' }
+                        size={ 'subtitle1' }
+                        text={ 'programming_languages' }
+                    />
                 </Grid>
-            ) ) }
-        </Grid>
+                { tempItems.map( ( item, index ) => (
+                    <Grid key={ index } size={ 4 } 
+                        sx={ {  
+                            display: 'flex',
+                            justifyContent: 'center'
+                        } }
+                    >
+                        <Typography sx={ { color: color ? color : '' } } variant='subtitle2'>
+                            { item.name }
+                        </Typography>
+                    </Grid>
+                ) ) }
+            </Grid>
+        </Paper>
     )
 }
 
