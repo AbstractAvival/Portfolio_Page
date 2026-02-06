@@ -33,7 +33,7 @@ const SkillDisplaySection = () => {
                 />
             </Grid>
             <Grid size={ 6 }>
-                <GridProgrammingLanguages />
+                <GridProgrammingLanguages color={ '#FFFFFF' }/>
             </Grid>
             <Grid size={ 6 }>
                 <GridBackendDevelopment />
