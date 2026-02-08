@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl'
 // ** MUI components
 import Typography from '@mui/material/Typography'
 
-const TranslatedText = ( { borderColor, borderStyle, borderWidth, center, color, size, text } ) => {
+const TranslatedText = ( { borderColor, borderStyle, borderWidth, center, color, fontWeight, size, text } ) => {
     const translations = useTranslations()
     return (
         <Typography 
@@ -14,7 +14,8 @@ const TranslatedText = ( { borderColor, borderStyle, borderWidth, center, color,
                 borderWidth: borderWidth ? borderWidth : '',
                 color: color ? color : '', 
                 display: center ? 'flex' : 'inline', 
-                textAlign: center ? 'center' : 'left' 
+                textAlign: center ? 'center' : 'left',
+                fontWeight: fontWeight ? fontWeight : ''
             } } 
             variant={ size ? size : '' }
         >

@@ -15,7 +15,7 @@ const MainColumn = props => {
                 text={ 'greeting_description' }
                 textPosition={ 'bottom' }
             />
-            <SkillDisplaySection />
+            <SkillDisplaySection backgroundColor={ '#640D14' }/>
             <DoubleColumnContactSection />
         </Paper>
     )

@@ -4,6 +4,7 @@ import TranslatedText from '@/components/section-components/TranslatedText'
 
 // ** MUI components
 import Grid from '@mui/material/Grid'
+import Paper from '@mui/material/Paper'
 
 // ** SVG Icons
 import ExpressIcon from '../../../../public/images/backend-development/Express.png'
@@ -12,13 +13,13 @@ import LaravelIcon from '../../../../public/images/backend-development/Laravel.p
 
 import MongoDBIcon from '../../../../public/images/databases/MongoDB.png'
 import MySQLIcon from '../../../../public/images/databases/MySQL.png'
-import SQLAlchemyIcon from '../../../../public/images/databases/SQLAlchemy.png'
 import SQLiteIcon from '../../../../public/images/databases/SQLite.png'
 
 import CssIcon from '../../../../public/images/frontend-development/CSS.png'
 import HTMLIcon from '../../../../public/images/frontend-development/HTML5.png'
 import MaterialUiIcon from '../../../../public/images/frontend-development/MaterialUi.png'
 import NextJsIcon from '../../../../public/images/frontend-development/NextJS.png'
+import ReactIcon from '../../../../public/images/frontend-development/React.png'
 
 import MonoGameIcon from '../../../../public/images/game-development/MonoGame.png'
 import SFMLIcon from '../../../../public/images/game-development/SFML.png'
@@ -57,10 +58,6 @@ const databases = [
         name: 'MySQL',
     },
     {
-        icon: SQLAlchemyIcon,
-        name: 'SQLAlchemy',
-    },
-    {
         icon: SQLiteIcon,
         name: 'SQLite',
     },
@@ -84,7 +81,7 @@ const frontendDevelopment = [
         name: 'NextJS',
     },
     {
-        icon: '',
+        icon: ReactIcon,
         name: 'React',
     },
 ]
@@ -135,88 +132,97 @@ const programmingLanguages = [
     },
 ]
 
-const SkillDisplaySection = () => {
+const SkillDisplaySection = ( { backgroundColor } ) => {
+    const GridRowLength = 4
+    const itemBackgroundColor = '#AD2831'
+    const SkillGridTitleSize = 'subtitle1'
+    const SkillGridTextSize = 'subtitle2'
     return (
-        <Grid container
-            sx={ {
-                margin: 12
+        <Paper elevation={ 1 }
+            sx={ { 
+                alignItems: 'top',
+                backgroundColor: backgroundColor ? backgroundColor : '', 
+                display: 'flex',
+                justifyContent: 'center',
+                margin: 1
             } }
         >
-            <Grid size={ 12 }
+            <Grid container
                 sx={ {
-                    display: 'flex',
-                    justifyContent: 'center',
-                    mb: 6
+                    margin: 5
                 } }
             >
-                <TranslatedText 
-                    borderColor={ '#FFFFFF' }
-                    borderStyle={ 'none none solid none' }
-                    borderWidth={ '3px' }
-                    center={ true }
-                    color={ '#FFFFFF' }
-                    size={ 'h4' }
-                    text={ 'skills' }
-                />
+                <Grid size={ 12 }
+                    sx={ {
+                        display: 'flex',
+                        justifyContent: 'center',
+                        mb: 4
+                    } }
+                >
+                    <TranslatedText 
+                        borderColor={ '#FFFFFF' }
+                        borderStyle={ 'none none solid none' }
+                        borderWidth={ '3px' }
+                        center={ true }
+                        color={ '#FFFFFF' }
+                        size={ 'h4' }
+                        text={ 'skills' }
+                    />
+                </Grid>
+                <Grid size={ GridRowLength } sx={ { padding: 1 } }>
+                    <SkillGrid 
+                        color={ '#FFFFFF' }
+                        items={ programmingLanguages }
+                        itemBackgroundColor={ itemBackgroundColor }
+                        itemHeight={ 50 }
+                        itemWidth={ 50 }
+                        textSize={ SkillGridTextSize }
+                        title={ 'programming_languages' }
+                        titleSize={ SkillGridTitleSize }
+                    />
+                </Grid>
+                <Grid size={ GridRowLength } sx={ { padding: 1 } }>
+                    <SkillGrid 
+                        color={ '#FFFFFF' }
+                        items={ frontendDevelopment }
+                        itemBackgroundColor={ itemBackgroundColor }
+                        textSize={ SkillGridTextSize }
+                        title={ 'frontend_development' }
+                        titleSize={ SkillGridTitleSize }
+                    />
+                </Grid>
+                <Grid size={ GridRowLength } sx={ { padding: 1 } }>
+                    <SkillGrid  
+                        color={ '#FFFFFF' }
+                        items={ backendDevelopment }
+                        itemBackgroundColor={ itemBackgroundColor }
+                        textSize={ SkillGridTextSize }
+                        title={ 'backend_development' }
+                        titleSize={ SkillGridTitleSize }
+                    />
+                </Grid>
+                <Grid size={ GridRowLength } sx={ { padding: 1 } }>
+                    <SkillGrid 
+                        color={ '#FFFFFF' }
+                        items={ databases }
+                        itemBackgroundColor={ itemBackgroundColor }
+                        textSize={ SkillGridTextSize }
+                        title={ 'databases' }
+                        titleSize={ SkillGridTitleSize }
+                    />
+                </Grid>
+                <Grid size={ GridRowLength } sx={ { padding: 1 } }>
+                    <SkillGrid 
+                        color={ '#FFFFFF' }
+                        items={ gameDevelopment }
+                        itemBackgroundColor={ itemBackgroundColor }v
+                        textSize={ SkillGridTextSize }
+                        title={ 'game_development' }
+                        titleSize={ SkillGridTitleSize }
+                    />
+                </Grid>
             </Grid>
-            <Grid size={ 6 } sx={ { padding: 1 } }>
-                <SkillGrid 
-                    backgroundColor={ '#640D14' } 
-                    color={ '#FFFFFF' }
-                    items={ programmingLanguages }
-                    itemBackgroundColor={ '#800E13' }
-                    itemHeight={ 50 }
-                    itemWidth={ 50 }
-                    textSize={ 'subtitle2' }
-                    title={ 'programming_languages' }
-                    titleSize={ 'subtitle1' }
-                />
-            </Grid>
-            <Grid size={ 6 } sx={ { padding: 1 } }>
-                <SkillGrid 
-                    backgroundColor={ '#640D14' } 
-                    color={ '#FFFFFF' }
-                    items={ backendDevelopment }
-                    itemBackgroundColor={ '#800E13' }
-                    textSize={ 'subtitle2' }
-                    title={ 'backend_development' }
-                    titleSize={ 'subtitle1' }
-                />
-            </Grid>
-            <Grid size={ 6 } sx={ { padding: 1 } }>
-                <SkillGrid 
-                    backgroundColor={ '#640D14' } 
-                    color={ '#FFFFFF' }
-                    items={ frontendDevelopment }
-                    itemBackgroundColor={ '#800E13' }
-                    textSize={ 'subtitle2' }
-                    title={ 'frontend_development' }
-                    titleSize={ 'subtitle1' }
-                />
-            </Grid>
-            <Grid size={ 6 } sx={ { padding: 1 } }>
-                <SkillGrid 
-                    backgroundColor={ '#640D14' } 
-                    color={ '#FFFFFF' }
-                    items={ databases }
-                    itemBackgroundColor={ '#800E13' }
-                    textSize={ 'subtitle2' }
-                    title={ 'databases' }
-                    titleSize={ 'subtitle1' }
-                />
-            </Grid>
-            <Grid size={ 6 } sx={ { padding: 1 } }>
-                <SkillGrid 
-                    backgroundColor={ '#640D14' } 
-                    color={ '#FFFFFF' }
-                    items={ gameDevelopment }
-                    itemBackgroundColor={ '#800E13' }v
-                    textSize={ 'subtitle2' }
-                    title={ 'game_development' }
-                    titleSize={ 'subtitle1' }
-                />
-            </Grid>
-        </Grid>
+        </Paper>
     )
 }
 
