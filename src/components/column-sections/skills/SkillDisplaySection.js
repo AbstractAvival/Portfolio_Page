@@ -2,14 +2,11 @@
 import SkillGrid from '@/components/section-components/skill-section-components/SkillGrid'
 import TranslatedText from '@/components/section-components/TranslatedText'
 
-// ** MUI components
-import Grid from '@mui/material/Grid'
-import Paper from '@mui/material/Paper'
-
-// ** SVG Icons
+// ** Icons
 import ExpressIcon from '../../../../public/images/backend-development/Express.png'
 import FlaskIcon from '../../../../public/images/backend-development/Flask.png'
 import LaravelIcon from '../../../../public/images/backend-development/Laravel.png'
+import NodeIcon from '../../../../public/images/backend-development/Node.png'
 
 import MongoDBIcon from '../../../../public/images/databases/MongoDB.png'
 import MySQLIcon from '../../../../public/images/databases/MySQL.png'
@@ -33,10 +30,14 @@ import KotlinIcon from '../../../../public/images/programming-languages/Kotlin.p
 import PhpIcon from '../../../../public/images/programming-languages/Php.png'
 import PytonIcon from '../../../../public/images/programming-languages/Python.png'
 
+// ** MUI components
+import Grid from '@mui/material/Grid'
+import Paper from '@mui/material/Paper'
+
 const backendDevelopment = [
     {
         icon: ExpressIcon,
-        name: 'Express',
+        name: 'Express.js',
     },
     {
         icon: FlaskIcon,
@@ -45,6 +46,10 @@ const backendDevelopment = [
     {
         icon: LaravelIcon,
         name: 'Laravel',
+    },
+    {
+        icon: NodeIcon,
+        name: 'Node.js',
     },
 ]
 
@@ -156,7 +161,7 @@ const SkillDisplaySection = ( { backgroundColor } ) => {
                     sx={ {
                         display: 'flex',
                         justifyContent: 'center',
-                        mb: 4
+                        mb: 5
                     } }
                 >
                     <TranslatedText 
@@ -165,6 +170,7 @@ const SkillDisplaySection = ( { backgroundColor } ) => {
                         borderWidth={ '3px' }
                         center={ true }
                         color={ '#FFFFFF' }
+                        fontWeight={ 'bold' }
                         size={ 'h4' }
                         text={ 'skills' }
                     />
@@ -174,8 +180,6 @@ const SkillDisplaySection = ( { backgroundColor } ) => {
                         color={ '#FFFFFF' }
                         items={ programmingLanguages }
                         itemBackgroundColor={ itemBackgroundColor }
-                        itemHeight={ 50 }
-                        itemWidth={ 50 }
                         textSize={ SkillGridTextSize }
                         title={ 'programming_languages' }
                         titleSize={ SkillGridTitleSize }
