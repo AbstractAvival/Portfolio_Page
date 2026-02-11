@@ -1,6 +1,7 @@
 // ** Component Imports
 import DoubleColumnAboutSection from "@/components/column-sections/about/DoubleColumnAboutSection"
 import DoubleColumnContactSection from "@/components/column-sections/contact/DoubleColumnContactSection"
+import SingleColumnExperienceSection from "@/components/column-sections/experience/SingleColumnExperienceSection"
 import ProfileImageSection from "@/components/column-sections/introduction/ProfileImageSection"
 import SkillDisplaySection from "@/components/column-sections/skills/SkillDisplaySection"
 
@@ -18,6 +19,7 @@ const MainColumn = props => {
             />
             <DoubleColumnAboutSection />
             <SkillDisplaySection backgroundColor={ '#640D14' }/>
+            <SingleColumnExperienceSection />
             <DoubleColumnContactSection />
         </Paper>
     )
