@@ -4,14 +4,14 @@ import TranslatedText from '@/components/section-components/TranslatedText'
 // ** MUI components
 import Grid from '@mui/material/Grid'
 
-const TitledGrid = ( { borderColor, borderWidth, children, titleSize, titleText } ) => {
+const TitledGrid = ( { borderColor, borderWidth, children, gridMargin, titleSize, titleText } ) => {
     return (
-        <Grid container spacing={ 2 }>
+        <Grid container spacing={ 2 } sx={ { marginY: gridMargin ? gridMargin : 4 } }>
             <Grid size={ 12 }
                 sx={ {
                     display: 'flex',
                     justifyContent: 'center',
-                    mb: 5
+                    mb: 4
                 } }
             >
                 <TranslatedText 

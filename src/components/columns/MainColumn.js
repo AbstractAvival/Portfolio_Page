@@ -17,7 +17,7 @@ const MainColumn = props => {
                 text={ 'greeting_description' }
                 textPosition={ 'bottom' }
             />
-            <DoubleColumnAboutSection />
+            <DoubleColumnAboutSection textPosition={ 'left' }/>
             <SkillDisplaySection backgroundColor={ '#640D14' }/>
             <SingleColumnExperienceSection />
             <DoubleColumnContactSection />

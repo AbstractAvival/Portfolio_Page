@@ -33,6 +33,7 @@ import PytonIcon from '../../../../public/images/programming-languages/Python.pn
 // ** MUI components
 import Grid from '@mui/material/Grid'
 import Paper from '@mui/material/Paper'
+import TitledGrid from '@/components/section-components/TitledGrid'
 
 const backendDevelopment = [
     {
@@ -152,79 +153,65 @@ const SkillDisplaySection = ( { backgroundColor } ) => {
                 margin: 1
             } }
         >
-            <Grid container
-                sx={ {
-                    margin: 5
-                } }
-            >
-                <Grid size={ 12 }
-                    sx={ {
-                        display: 'flex',
-                        justifyContent: 'center',
-                        mb: 5
-                    } }
+            <Grid container >
+                <TitledGrid
+                    borderColor={ '#FFFFFF' }
+                    borderWidth={ '3px' }
+                    gridMargin={ 5 }
+                    titleSize={ 'h4' }
+                    titleText={ 'skills' }
                 >
-                    <TranslatedText 
-                        borderColor={ '#FFFFFF' }
-                        borderStyle={ 'none none solid none' }
-                        borderWidth={ '3px' }
-                        center={ true }
-                        color={ '#FFFFFF' }
-                        fontWeight={ 'bold' }
-                        size={ 'h4' }
-                        text={ 'skills' }
-                    />
-                </Grid>
-                <Grid size={ GridRowLength } sx={ { padding: 1 } }>
-                    <SkillGrid 
-                        color={ '#FFFFFF' }
-                        items={ programmingLanguages }
-                        itemBackgroundColor={ itemBackgroundColor }
-                        textSize={ SkillGridTextSize }
-                        title={ 'programming_languages' }
-                        titleSize={ SkillGridTitleSize }
-                    />
-                </Grid>
-                <Grid size={ GridRowLength } sx={ { padding: 1 } }>
-                    <SkillGrid 
-                        color={ '#FFFFFF' }
-                        items={ frontendDevelopment }
-                        itemBackgroundColor={ itemBackgroundColor }
-                        textSize={ SkillGridTextSize }
-                        title={ 'frontend_development' }
-                        titleSize={ SkillGridTitleSize }
-                    />
-                </Grid>
-                <Grid size={ GridRowLength } sx={ { padding: 1 } }>
-                    <SkillGrid  
-                        color={ '#FFFFFF' }
-                        items={ backendDevelopment }
-                        itemBackgroundColor={ itemBackgroundColor }
-                        textSize={ SkillGridTextSize }
-                        title={ 'backend_development' }
-                        titleSize={ SkillGridTitleSize }
-                    />
-                </Grid>
-                <Grid size={ GridRowLength } sx={ { padding: 1 } }>
-                    <SkillGrid 
-                        color={ '#FFFFFF' }
-                        items={ databases }
-                        itemBackgroundColor={ itemBackgroundColor }
-                        textSize={ SkillGridTextSize }
-                        title={ 'databases' }
-                        titleSize={ SkillGridTitleSize }
-                    />
-                </Grid>
-                <Grid size={ GridRowLength } sx={ { padding: 1 } }>
-                    <SkillGrid 
-                        color={ '#FFFFFF' }
-                        items={ gameDevelopment }
-                        itemBackgroundColor={ itemBackgroundColor }v
-                        textSize={ SkillGridTextSize }
-                        title={ 'game_development' }
-                        titleSize={ SkillGridTitleSize }
-                    />
-                </Grid>
+                    <Grid size={ GridRowLength } sx={ { padding: 1 } }>
+                        <SkillGrid 
+                            color={ '#FFFFFF' }
+                            items={ programmingLanguages }
+                            itemBackgroundColor={ itemBackgroundColor }
+                            textSize={ SkillGridTextSize }
+                            title={ 'programming_languages' }
+                            titleSize={ SkillGridTitleSize }
+                        />
+                    </Grid>
+                    <Grid size={ GridRowLength } sx={ { padding: 1 } }>
+                        <SkillGrid 
+                            color={ '#FFFFFF' }
+                            items={ frontendDevelopment }
+                            itemBackgroundColor={ itemBackgroundColor }
+                            textSize={ SkillGridTextSize }
+                            title={ 'frontend_development' }
+                            titleSize={ SkillGridTitleSize }
+                        />
+                    </Grid>
+                    <Grid size={ GridRowLength } sx={ { padding: 1 } }>
+                        <SkillGrid  
+                            color={ '#FFFFFF' }
+                            items={ backendDevelopment }
+                            itemBackgroundColor={ itemBackgroundColor }
+                            textSize={ SkillGridTextSize }
+                            title={ 'backend_development' }
+                            titleSize={ SkillGridTitleSize }
+                        />
+                    </Grid>
+                    <Grid size={ GridRowLength } sx={ { padding: 1 } }>
+                        <SkillGrid 
+                            color={ '#FFFFFF' }
+                            items={ databases }
+                            itemBackgroundColor={ itemBackgroundColor }
+                            textSize={ SkillGridTextSize }
+                            title={ 'databases' }
+                            titleSize={ SkillGridTitleSize }
+                        />
+                    </Grid>
+                    <Grid size={ GridRowLength } sx={ { padding: 1 } }>
+                        <SkillGrid 
+                            color={ '#FFFFFF' }
+                            items={ gameDevelopment }
+                            itemBackgroundColor={ itemBackgroundColor }v
+                            textSize={ SkillGridTextSize }
+                            title={ 'game_development' }
+                            titleSize={ SkillGridTitleSize }
+                        />
+                    </Grid>
+                </TitledGrid>
             </Grid>
         </Paper>
     )
