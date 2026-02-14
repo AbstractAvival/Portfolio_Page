@@ -1,6 +1,5 @@
 // ** Component Imports
 import SkillGrid from '@/components/section-components/skill-section-components/SkillGrid'
-import TranslatedText from '@/components/section-components/TranslatedText'
 
 // ** Icons
 import ExpressIcon from '../../../../public/images/backend-development/Express.png'
