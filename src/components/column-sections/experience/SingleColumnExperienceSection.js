@@ -6,6 +6,8 @@ import TranslatedText from '@/components/section-components/TranslatedText'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 
+const items = []
+
 const SingleColumnExperienceSection = () => {
     return (
         <Box>
